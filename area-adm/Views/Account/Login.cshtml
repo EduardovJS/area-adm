@@ -1,28 +1,42 @@
 ﻿@model AccountViewModel
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+</head>
 
-<div class="container">
-    <div class="row">
-        <form>
-            <div class="mb-3 col-3">
-                <label for="inputEmail" class="form-label">Nome</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu nome de usuário." required>
+<div class="bg-cover">
+    <body>
+        <div class="d-flex justify-content-center">
+            <div class="card p-5">
+                <h2 class="text-center">Formulário de Login</h2>
+                <form method="post" action="@Url.Action("Login", "Account")">
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Nome</label>
+                        <input type="email" class="form-control" id="inputEmail" name="Email" placeholder="Digite seu nome de usuário." required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="inputPassword" name="Password" placeholder="Digite sua senha." required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe">
+                        <label class="form-check-label" for="rememberMe">Lembrar-me</label>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </div>
+                    <div class="mb-1">
+                        <a href="@Url.Action("Register", "Account")">Cadastrar-se</a>
+                    </div>
+                    <div class="mb-3">
+                        <a href="@Url.Action("ForgotPassword", "Account")">Esqueceu a senha?</a>
+                    </div>
+                </form>
             </div>
-            <div class="mb-3 col-3">
-                <label for="inputPassword" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Digite sua senha." required>
-            </div>
-            <div class="mb-3 col-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Lembrar-me</label>
-            </div>
-            <div class="mb-3 col-3">
-                <button type="submit" class="btn btn-primary w-100">Entrar</button>
-            </div>
-            <div class="mb-3 col-3">
-               <p>Não tem uma conta?</p>
-               <a></a>
-            </div>
-        </form>
-    </div>
+        </div>
 </div>
-</div>
+</body>
+</html>
