@@ -56,6 +56,9 @@ namespace area_adm.Controllers
             // Se autenticação falhar, será feito outra tentativa de acesso ao login.
             return View(accountVM);
         }
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(AccountViewModel accountVM)
@@ -80,5 +83,15 @@ namespace area_adm.Controllers
             }
             return View(accountVM);
         }
+
+        public IActionResult Register(string returnUrl)
+        {
+            return View(new AccountViewModel()
+            {
+                ReturnUrl = returnUrl
+            });
+
+        }
+
     }
 }
