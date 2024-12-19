@@ -1,4 +1,5 @@
 html {
+    font-family: Verdana;
     font-size: 14px;
 }
 
@@ -17,10 +18,25 @@ html {
     min-height: 100%;
 }
 
-body {
-    margin-bottom: 60px;
+.bg-cover {
+    background-image: url('/img/1.-Honda-CG-160.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Garante que o fundo não se mova com o conteúdo */
+    min-height: 100vh;
 }
 
-.bg-cover {
-    background-image: url('/img/tela2.png');
+.card-p5 {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 14px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Limita a largura do cartão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+.btn-primary {
+    background-color: #2196F3;
+    border-color: #1976D2;
+}
+
