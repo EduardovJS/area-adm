@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800&family=Noto+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: "Kanit", serif, "Noto Sans", sans-serif;
 }
 
 html {
     font-family: Verdana;
-    font-size: 14px;
+    font-size: 1px;
 }
 
 @media (min-width: 768px) {
@@ -49,3 +47,29 @@ html {
     border-color: #1976D2;
 }
 
+.bodyesqueci {
+    background-image: url('/img/undraw_cat_lqdj.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.es{
+    background-image: url('/img/undraw_cat_lqdj.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.formedit{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content : center;
+    justify-content: center;
+
+}

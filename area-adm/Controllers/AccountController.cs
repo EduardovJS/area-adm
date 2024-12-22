@@ -93,5 +93,16 @@ namespace area_adm.Controllers
 
         }
 
+        public IActionResult Esqueci(string returnUrl)
+        {
+            return View(new AccountViewModel()
+            {
+                ReturnUrl = returnUrl
+            });
+
+        }
+
+
+
     }
 }
